@@ -1,0 +1,1 @@
+Select menuItems.Name from orderitems left join orders on orderitems.orderId = orders.idOrders left join menuItems on orderitems.MenuItemID = menuItems.idMenuItems group by menuItems.Name having count(quantity) >= 2;

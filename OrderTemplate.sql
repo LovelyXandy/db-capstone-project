@@ -1,0 +1,12 @@
+INSERT INTO address (Street, City, State, ZipCode) Values ("1 Blah street", "City place", "In the state", "11111");
+INSERT INTO customer (AddressID, Email, ContactNumber, CustomerName) Values (1, "test@test.com", "+1555999", "Fake PersonA");
+INSERT INTO delivery (AddressID, DeliveryStatus, DeliveryTarget) Values (1, "Paused", NOW()+5);
+INSERT INTO address (Street, City, State, ZipCode) Values ("2 Blah street", "Other City place", "Out the state", "22222");
+INSERT INTO customer (AddressID, Email, ContactNumber, CustomerName) Values (2, "notreal@fake.com", "+1666888", "Notreal PersonB");
+INSERT INTO delivery (AddressID, DeliveryStatus, DeliveryTarget) Values (2, "Paused", NOW()+4);
+INSERT INTO orders (customerID, DeliveryID, OrderPlaced) Values (1,1, NOW());
+INSERT INTO orders (customerID, DeliveryID, OrderPlaced) Values (2,2, NOW());
+INSERT INTO menu (Cusine) VALUES ("French"),("Italian"),("Greek"),("Spanish");
+INSERT INTO course (Course) VALUES ("Starter"),("Main"),("Dessert"),("Beverage"),("Snack"),("Other");
+INSERT INTO menuItems (Name, Description, Price, MenuID, CourseID) VALUES ("Moussaka","Delicious Greek Moussaka",15,3,2);
+INSERT INTO menuItems (Name, Description, Price, MenuID, CourseID) VALUES ("Greek Salad","Delicious Greek Salad",12,3,2);

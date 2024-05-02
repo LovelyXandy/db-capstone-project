@@ -1,0 +1,1 @@
+CREATE VIEW OrdersView as select idOrders as OrderID, sum(quantity) as TotalItems, sum(quantity*price) as TotalCost from orderitems left join orders on orderitems.orderId = orders.idOrders left join menuItems on orderitems.MenuItemID = menuItems.idMenuItems group by orders.idOrders;
